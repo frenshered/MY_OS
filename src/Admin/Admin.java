@@ -1,6 +1,6 @@
 package Admin;
 
-import MY_OS.DataBase;
+import DataBase.DataBase;
 import MY_OS.Person;
 
 import java.util.Scanner;
@@ -71,8 +71,6 @@ public class Admin extends GeneralAdmin {
         if (!this.password.equals(inputPassword)) {
             return false;
         }
-
-        DataBase db = new DataBase();
 
         System.out.print("Enter new login: ");
         Scanner inNP = new Scanner(System.in);
