@@ -1,6 +1,9 @@
 {
-  "password": "admin",
-  "login": "admin",
-  "db_name": "users",
-  "db_url": "https://localhost.com"
+  "password": "03102002",
+  "login": "root",
+  "users_table_name": "users",
+  "admins_table_name": "admins",
+  "user_messages_table": "user_messages",
+  "db_name": "my_os",
+  "db_url": "jdbc:mysql://127.0.0.1:3306/my_os?serverTimezone=Europe/Kiev&useSSL=false"
 }

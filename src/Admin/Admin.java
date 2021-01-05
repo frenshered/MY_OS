@@ -3,6 +3,8 @@ package Admin;
 import DataBase.DataBase;
 import MY_OS.Person;
 
+import java.io.FileNotFoundException;
+import java.sql.SQLException;
 import java.util.Scanner;
 
 public class Admin extends GeneralAdmin {
@@ -34,7 +36,7 @@ public class Admin extends GeneralAdmin {
          this.clearDataBase = value;
      }
 
-     public boolean changeLogin() {
+     public boolean changeLogin() throws FileNotFoundException, SQLException {
          System.out.print("Enter password: ");
          Scanner inP = new Scanner(System.in);
 

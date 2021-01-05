@@ -1,6 +1,10 @@
 package User;
 
+import DataBase.DataBase;
 import MY_OS.Person;
+
+import java.sql.SQLException;
+import java.util.Scanner;
 
 public class StdUser extends Person {
     protected String userName;
@@ -8,14 +12,14 @@ public class StdUser extends Person {
     protected String login;
     protected String password;
 
-    StdUser() {
+    public StdUser() {
         this.userName = null;
         this.userSubName = null;
         this.login = null;
         this.password = null;
     }
 
-    StdUser(String name, String subName, String login, String password) {
+    public StdUser(String name, String subName, String login, String password) {
         this.userName = name;
         this.userSubName = subName;
         this.login = login;
@@ -52,5 +56,12 @@ public class StdUser extends Person {
 
     public void setPassword(String newPassword) {
         this.password = newPassword;
+    }
+
+    public void sendMessageToDevelopers(String message, DataBase db) throws SQLException {
+        System.out.print("Enter your email: ");
+        Scanner email = new Scanner(System.in);
+
+        db.sendMessageToDevelopers(message, this, email.nextLine());
     }
 }
